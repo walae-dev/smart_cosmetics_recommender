@@ -1,0 +1,103 @@
+<!DOCTYPE html>    <!--Dit au navigateur que c'est une page HTML-->
+<html lang="fr">   <!--langue du site-->
+    <head>          <!--cerveau du site-->
+        <meta charset="UTF-8">                      <!--Permet d'afficher correctements les accents-->
+        <title>Boutique Cosmétique</title>          <!--titre dans l'onglet du navigateur-->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">     <!--importer des polices depuis Google fonts-->
+        <link rel="stylesheet" href="CSS/style.css">        <!--relie le HTML au CSS-->
+        
+    </head>
+    
+    <body>
+
+        <header class="header">                <!--pour le haut du site-->
+            <h1 class="logo">Glow Beauty</h1>                         <!--nom su site-->
+            
+            <nav>                                          <!--menu de navigation-->
+                <a href="index.html">Acceuil</a>            <!--lien vers d'autres pages-->
+                <a href="produits.html">Produits</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div id="cart">🛒0</div>
+        </header>
+
+        <section class="hero">                     <!--sert a organiser le contenu-->
+            <div class="hero-content">
+                <h2>Réveler votre beauté naturelle</h2>             <!--titre-->
+                <p>Produits haut de gamme, inspirés de la nature</p>           <!--texte-->
+                <button>Découvrir la collection</button>                          <!--bouton-->
+            </div> 
+        </section>
+
+        <section class="produits">                  <!--section pour afficher les produits-->
+            <h2>Nos Produits</h2>
+            
+            <div class="grid">                         <!--conteneur qui va devenir une grille-->
+                <div class="card">                      <!--une "carte produit"-->
+                    <span class="badge">Promo</span>     <!--petit element pour afficher"Promo"-->
+
+                    <img src="images/produit1.jpg">                    <!--image du produit-->
+                    <h3>Huile naturelle</h3>                               <!--nom du produit-->
+                    <p>400 DH</p>                                       <!--prix-->
+                </div>
+
+                <div class="card">
+                    <img src="images/produit2.jpg">
+                    <h3>Créme NL</h3>
+                    <p>260 DH</p>
+                </div>
+                <div class="card">
+                    <img src="images/produit3.jpg">
+                    <h3>Pack Lovgron</h3>
+                    <p>350 DH</p>
+                </div>
+                <div class="card">
+                    <img src="images/produit4.jpg">
+                    <h3>Outils massage</h3>
+                    <p>300 DH</p>
+                </div>
+                <div class="card">
+                    <img src="images/produit5.jpg">
+                    <h3>Pack L'Oréal Paris</h3>
+                    <p>450 DH</p>
+                </div>
+                <div class="card">
+                    <img src="images/produit6.jpg">
+                    <h3>Grand pack Meyer</h3>
+                    <p>600 DH</p>
+                </div>
+                <div class="card">
+                    <img src="images/produit7.jpg">
+                    <h3>Make up complet de Maybelline</h3>
+                    <p>2500 DH</p>
+                </div>
+                <div class="card">
+                    <img src="images/produit8.jpg">
+                    <h3>Pallette Révolution</h3>
+                    <p>750 DH</p>
+                </div>
+            </div>
+        </section>
+        <section class="engagements">
+            <div>
+                <h3>Livraison Rapide</h3>
+                <p>Partout au Maroc</p>
+            </div>
+
+            <div>
+                <h3>Produits naturels</h3>
+                <p>100% bio</p>
+            </div>
+
+            <div>
+                <h3>Qualité prémium</h3>
+                <p>Testée dermatologiquement</p>
+            </div>
+        </section>
+        <footer>                                    <!--bas du site-->
+            <p> 2026 Glow Beauty</p>
+        </footer>
+        <script src="data/products.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

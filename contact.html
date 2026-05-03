@@ -1,0 +1,42 @@
+<!DOCTYPE html>    <!--Dit au navigateur que c'est une page HTML-->
+<html lang="fr">   <!--langue du site-->
+    <head>          <!--cerveau du site-->
+        <meta charset="UTF-8">                      <!--Permet d'afficher correctements les accents-->
+        <title>Boutique Cosmétique</title>          <!--titre dans l'onglet du navigateur-->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">     <!--importer des polices depuis Google fonts-->
+        <link rel="stylesheet" href="CSS/style.css">        <!--relie le HTML au CSS-->
+        
+    </head>
+    
+    <body>
+
+        <header class="header">                <!--pour le haut du site-->
+            <h1 class="logo">Glow Beauty</h1>                          <!--nom su site-->
+            
+            <nav>                                          <!--menu de navigation-->
+                <a href="index.html">Acceuil</a>            <!--lien vers d'autres pages-->
+                <a href="produits.html">Produits</a>
+                <a href="contact.html">Contact</a>
+                
+            </nav>
+            <div id="cart">🛒0</div>
+        </header>
+
+        <section class="contact">
+            <h2>contactez-nous</h2>
+
+            <p>📍 Rabat, Maroc</p>
+            <p>📞 +212 7 67 12 11 07</p>
+            <p>📧 baalouwalae@gmail.com</p>
+
+            <form>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        <script src="data/products.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

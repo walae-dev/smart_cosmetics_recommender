@@ -1,0 +1,291 @@
+<!DOCTYPE html>    <!--Dit au navigateur que c'est une page HTML-->
+<html lang="fr">   <!--langue du site-->
+    <head>          <!--cerveau du site-->
+        <meta charset="UTF-8">                      <!--Permet d'afficher correctements les accents-->
+        <title>Produits-Glow Beauty</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">     <!--importer des polices depuis Google fonts-->
+        <link rel="stylesheet" href="CSS/style.css">        <!--relie le HTML au CSS-->
+    </head>
+
+    <body>
+        <header class="header">                <!--pour le haut du site-->
+            <h1 class="logo">Glow Beauty</h1>
+            
+            <nav>                                          <!--menu de navigation-->
+                <a href="index.html">Acceuil</a>            <!--lien vers d'autres pages-->
+                <a href="produits.html">Produits</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div id="cart">🛒0</div>
+        </header>
+
+        <section class="produits">                  <!--section pour afficher les produits-->
+            <h2>Notre Catalogue</h2>
+
+            <div class="ai-recommendation">
+                <h3>Find your perfect product </h3>
+
+                <select id="category">
+                    <option value="skincare">Skincare</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="perfume">PERFUME</option>
+                    <option value="box">Box</option>
+                </select>
+                <div id="skin-container">
+                <select id="skin">
+                    <option value="oily">Oily</option>
+                    <option value="dry">Dry</option>
+                    <option value="sensitive">Sensitive</option>
+                </select>
+                </div>
+                <input type="number" id="budget" placeholder="Budjet">
+
+                <button onclick="recommandProduct()">Get recommandation</button>
+
+                <p id="result"></p>
+            </div>
+            
+            <div class="grid">                         <!--conteneur qui va devenir une grille-->
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro1.jpeg">                    <!--image du produit-->
+                    <h3>Grande pack de la gamme LANEIGE</h3>                               <!--nom du produit-->
+                    <p> 3000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro2.jpeg">                    <!--image du produit-->
+                    <h3>Anticerne NARS</h3>                               <!--nom du produit-->
+                    <p> 150 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro3.jpeg">                    <!--image du produit-->
+                    <h3>6 Blush DIOR</h3>                               <!--nom du produit-->
+                    <p> 2500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro4.jpeg">                    <!--image du produit-->
+                    <h3>Mascara ESSENCE</h3>                               <!--nom du produit-->
+                    <p> 50 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro5.jpeg">                    <!--image du produit-->
+                    <h3>Coco Mademoiselle CHANEL PARIS</h3>                               <!--nom du produit-->
+                    <p> 2500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro6.jpeg">                    <!--image du produit-->
+                    <h3>Victoria's Secret Bombshell</h3>                               <!--nom du produit-->
+                    <p> 3000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro7.jpeg">                    <!--image du produit-->
+                    <h3>Prada Milano</h3>                               <!--nom du produit-->
+                    <p> 5000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro8.jpeg">                    <!--image du produit-->
+                    <h3>Grande pack de la gamme CENTELLA</h3>                               <!--nom du produit-->
+                    <p> 3500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro9.jpeg">                    <!--image du produit-->
+                    <h3>Pack de DOVE</h3>                               <!--nom du produit-->
+                    <p> 2000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+                
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro10.jpeg">                    <!--image du produit-->
+                    <h3>CERAVE, La Roche-Posay, Vaseline</h3>                               <!--nom du produit-->
+                    <p> 2500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro11.jpeg">                    <!--image du produit-->
+                    <h3>Petit pack de la gamme CENTELLA</h3>                               <!--nom du produit-->
+                    <p> 2000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro12.jpeg">                    <!--image du produit-->
+                    <h3>3 Créme de Beauty Of Joseon</h3>                               <!--nom du produit-->
+                    <p> 1500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro13.jpeg">                    <!--image du produit-->
+                    <h3>Pack de la gamme ORDINARY</h3>                               <!--nom du produit-->
+                    <p> 2500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro14.jpeg">                    <!--image du produit-->
+                    <h3>Pack DOVE "Noix de coco"</h3>                               <!--nom du produit-->
+                    <p> 3500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro15.jpeg">                    <!--image du produit-->
+                    <h3>Glow Recipe</h3>                               <!--nom du produit-->
+                    <p> 3000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro16.jpeg">                    <!--image du produit-->
+                    <h3>4 Beauty Blinder</h3>                               <!--nom du produit-->
+                    <p> 250 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro17.jpeg">                    <!--image du produit-->
+                    <h3>Eylener DIOR</h3>                               <!--nom du produit-->
+                    <p> 150 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro18.jpeg">                    <!--image du produit-->
+                    <h3>Pallette Nude de NARS</h3>                               <!--nom du produit-->
+                    <p> 1000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro19.jpeg">                    <!--image du produit-->
+                    <h3>Fond de teint NARS</h3>                               <!--nom du produit-->
+                    <p> 200 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro20.jpeg">                    <!--image du produit-->
+                    <h3>Démaquillon GARNIER</h3>                               <!--nom du produit-->
+                    <p> 150 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro21.jpeg">                    <!--image du produit-->
+                    <h3>7 Rouge a lévres RARE BEAUTY </h3>                               <!--nom du produit-->
+                    <p> 250 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro22.jpeg">                    <!--image du produit-->
+                    <h3>Mascara SKY HIGH</h3>                               <!--nom du produit-->
+                    <p> 80 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro23.jpeg">                    <!--image du produit-->
+                    <h3>3 Rouge a lévres MAYBELLINE</h3>                               <!--nom du produit-->
+                    <p> 300 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro24.jpeg">                    <!--image du produit-->
+                    <h3>4 Gloss RHODE</h3>                               <!--nom du produit-->
+                    <p> 350 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro25.jpeg">                    <!--image du produit-->
+                    <h3>KAYALI Vanille</h3>                               <!--nom du produit-->
+                    <p> 3000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro26.jpeg">                    <!--image du produit-->
+                    <h3>KAYALI Fruit Rouge</h3>                               <!--nom du produit-->
+                    <p> 3500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro27.jpeg">                    <!--image du produit-->
+                    <h3>LIBRE</h3>                               <!--nom du produit-->
+                    <p> 5000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro28.jpeg">                    <!--image du produit-->
+                    <h3>Pack MEDICUBE</h3>                               <!--nom du produit-->
+                    <p> 4500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro29.jpeg">                    <!--image du produit-->
+                    <h3>Serum péche ANUA</h3>                               <!--nom du produit-->
+                    <p> 5000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro30.jpeg">                    <!--image du produit-->
+                    <h3>BURBURRY HER</h3>                               <!--nom du produit-->
+                    <p> 3500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro31.jpeg">                    <!--image du produit-->
+                    <h3>Blush SHEGLAM</h3>                               <!--nom du produit-->
+                    <p> 250 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro32.jpeg">                    <!--image du produit-->
+                    <h3>Pack Shampoing MIEL</h3>                               <!--nom du produit-->
+                    <p> 2500 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro33.jpeg">                    <!--image du produit-->
+                    <h3>Pack DIOR</h3>                               <!--nom du produit-->
+                    <p> 2000 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+
+                <div class="card">                      <!--une "carte produit"-->
+                    <img src="image_produit/pro34.jpeg">                    <!--image du produit-->
+                    <h3>Ensemble de brosse Make up de REDSQUARE</h3>                               <!--nom du produit-->
+                    <p> 250 DH</p>                                       <!--prix-->
+                    <button class="add-to-cart">Ajouter</button>
+                </div>
+            </div>
+        </section>
+        <script src="data/products.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
